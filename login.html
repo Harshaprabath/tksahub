@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Glary Animated Web Page</title>
+  <style>
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.pixelstalk.net/wp-content/uploads/images6/Hacker-Wallpaper-4K-HD-Free-download.jpg');
+      background-size: cover;
+      z-index: -1;
+      animation: background 15s ease infinite;
+    }
+
+    @keyframes background {
+      0% {
+        background: url('https://i.pinimg.com/originals/3f/9b/86/3f9b86a6dbf55a031073508538c39d61.jpg');
+        background-size: cover;
+      }
+
+      25% {
+        background: url('https://cutewallpaper.org/26/anonymous-philippines-wallpaper-hd/1049418489.jpg');
+        background-size: cover;
+      }
+
+      50% {
+        background: url('https://st3.depositphotos.com/9303990/17019/i/450/depositphotos_170193604-stock-photo-hooded-computer-hacker-stealing-information.jpg');
+        background-size: cover;
+      }
+
+      75% {
+        background: url('https://steamuserimages-a.akamaihd.net/ugc/845969519283718477/AAFB83988CA01249AA6A2E1A94DE8BBCAA948188/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
+        background-size: cover;
+      }
+
+      100% {
+        background: url('https://wallpapercave.com/wp/wp2735174.jpg');
+        background-size: cover;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="background">
+
+    <h6 id="code" style="color: #fbf6f6;"></h6>
+
+    <script>
+      // Generate a random string of length n
+      function generateCode(length) {
+        var result = '';
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for (var i = 0; i < length; i++) {
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+
+        }
+        return result;
+
+
+      }
+      // Generate a random string of length n
+      function generate() {
+
+
+        var r = "";
+
+        for (var i = 0; i < 100; i++) {
+          r += generateCode(100) + '::::::::::::::::::::::::::::::::::::::::: uploaded  -> success <br>  ';
+        }
+
+        return r;
+
+      }
+
+      // Display the randomly generated code in the HTML element with ID "code"
+      const codeElement = document.getElementById("code");
+      const randomCode = generate(); // Generate a random code with length 10
+      codeElement.innerHTML = randomCode;
+
+      setTimeout(function () {
+        window.location.href = "login1.2.html";
+      }, 2000); // 10000 milliseconds = 10 seconds
+
+
+   
+    </script>
+  </div>
+
+</body>
+
+</html>

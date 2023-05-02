@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Glary Animated Web Page</title>
+  <style>
+    #videoElement {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      size: 100px;
+      transform: translate(-50%, -50%);
+      color:rgb(0, 255, 30)
+    }
+
+    #im {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      size: 100px;
+      transform: translate(-50%, -50%);
+      color:rgb(255, 4, 0)
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.pixelstalk.net/wp-content/uploads/images6/Hacker-Wallpaper-4K-HD-Free-download.jpg');
+      background-size: cover;
+      z-index: -1;
+      animation: background 20s ease infinite;
+    }
+
+    @keyframes background {
+      0% {
+        background: url('https://i.pinimg.com/originals/3f/9b/86/3f9b86a6dbf55a031073508538c39d61.jpg');
+        background-size: cover;
+      }
+
+      25% {
+        background: url('https://e1.pxfuel.com/desktop-wallpaper/686/191/desktop-wallpaper-smiley-face-black-backgrounds-black-face.jpg');
+        background-size: cover;
+      }
+
+      50% {
+        background: url('https://st3.depositphotos.com/9303990/17019/i/450/depositphotos_170193604-stock-photo-hooded-computer-hacker-stealing-information.jpg');
+        background-size: cover;
+      }
+
+      75% {
+        background: url('https://steamuserimages-a.akamaihd.net/ugc/845969519283718477/AAFB83988CA01249AA6A2E1A94DE8BBCAA948188/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
+        background-size: cover;
+      }
+
+      100% {
+        background: url('https://wallpapercave.com/wp/wp2735174.jpg');
+        background-size: cover;
+      }
+    }
+
+    .bubbled-word {
+    font-size: 70px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .bubbled-word::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skew(0deg);
+    opacity: 0;
+    animation: bubble 2.5s backwards reverse;
+    animation-delay: 1s;
+  }
+
+  @keyframes bubble {
+    0% {
+      opacity: 0;
+      transform: skew(-10deg) translateY(0);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: skew(-10deg) translateY(-100px);
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="background">
+
+    <h1 id="videoElement" class="bubbled-word" data-text="ACCESS GRANTED" >ACCESS GRANTED</h1>
+    <h1 id="im"  >I'M INSIDE<br> uploads : 100%<br> installed : 100%</h1>
+    <script>
+     
+
+
+
+      setTimeout(function () {
+        window.location.href = "login2.html";
+      }, 5000); // 10000 milliseconds = 10 seconds
+
+
+
+    </script>
+  </div>
+
+</body>
+
+</html>
